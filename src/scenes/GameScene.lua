@@ -15,13 +15,14 @@ function GameScene.draw(self)
 end
 
 function GameScene.update(self, dt)
-    if _LK.isDown("m") then
-        print("JUMP INTO [ MAIN MENU SCREEN ]")
-        self.sceneManager:switchTo("src/scenes/MainMenuScene")
-    end
+
 end
 
 function GameScene.keypressed(self, key)
+    if (key == "m") then
+        print("JUMP INTO [ MAIN MENU SCREEN ]")
+        self.sceneManager:switchTo("src/scenes/MainMenuScene")
+    end
 end
 
 return GameScene

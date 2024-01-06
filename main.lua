@@ -19,6 +19,7 @@ end
 function love.load()
     math.randomseed(os.time())
 
+    _LM.setVisible(false)
     _LG.setDefaultFilter("nearest", "nearest")
     _LG.setBackgroundColor(.25, .3, .23)
 
@@ -39,6 +40,9 @@ function love.draw()
 
     sceneManager:draw()
 
+    -- 
+    love.graphics.print('FPS: ' .. love.timer.getFPS(), 700, 10)
+
     _LG.pop()
 end
 
@@ -52,6 +56,6 @@ function love.keypressed(key)
 end
 
 function love.resize(w, h)
+    print("window resized: " .. w .. "x" .. h)
     updateScaleAndOffset()
-    print("resize: " .. w .. "x" .. h)    
 end
