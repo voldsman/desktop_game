@@ -26,7 +26,7 @@ function MainMenuScreen.draw(self)
 
     _LG.setColor(0.5, 0.6, 0.5, 0.5)
     _LG.rectangle("fill", 0, 0, menuWidth, _LG.getHeight())
-    _LG.setColor(DEFAULT_COLOR)
+    _LG.setColor(RESET_COLOR)
 
     _LG.setFont(FONT22)
     local gameNameText = "Desktop Game"
@@ -53,7 +53,7 @@ function MainMenuScreen.draw(self)
         _LG.print(menuItemText, menuItemX, 200 + (i * 2) * fontHeight)
     end
 
-    _LG.setColor(DEFAULT_COLOR)
+    _LG.setColor(RESET_COLOR)
 end
 
 function MainMenuScreen.update(self, dt)

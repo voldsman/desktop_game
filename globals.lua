@@ -12,7 +12,7 @@ _LS = love.system
 OS_TYPE = _LS.getOS()
 IS_WEB = OS_TYPE == "Web"
 
-DEFAULT_COLOR = {1, 1, 1, 1}
+RESET_COLOR = {1, 1, 1, 1}
 
 -- tml placing it here
 BG_IMAGE = _LG.newImage("src/assets/images/background.jpg")
