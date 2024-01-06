@@ -8,5 +8,5 @@
 
 # build love file
 GAME_NAME="desktop_game"
-zip -9 -r "$GAME_NAME.love" . -x "./scripts/*" -x ".DS_Store"
+zip -9 -r "$GAME_NAME.love" . -x "./scripts/*" -x ".DS_Store" -x ".git/*" -x ".gitignore"
 mv "$GAME_NAME.love" ./scripts/dist/

@@ -6,7 +6,6 @@ local sceneManager = {}
 
 local virtualWidth = 800
 local virtualHeight = 600
-local windowWidth, windowHeight = virtualWidth, virtualHeight
 local scale = 1
 local offsetX, offsetY = 0, 0
 
@@ -20,7 +19,7 @@ end
 function love.load()
     love.graphics.setDefaultFilter("nearest", "nearest")
     updateScaleAndOffset()
-    love.graphics.setBackgroundColor(.53, .09, 33)
+    love.graphics.setBackgroundColor(.25, .3, .23)
 
     sceneManager = SceneManager.new()
     sceneManager:load("src/scenes/MainMenuScene")
