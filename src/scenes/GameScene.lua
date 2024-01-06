@@ -10,6 +10,8 @@ end
 
 function GameScene.draw(self)
     _LG.setBackgroundColor(.98, .19, .99)
+
+    _LG.print("Game Screen", 200, 200)
 end
 
 function GameScene.update(self, dt)
@@ -17,6 +19,9 @@ function GameScene.update(self, dt)
         print("JUMP INTO [ MAIN MENU SCREEN ]")
         self.sceneManager:switchTo("src/scenes/MainMenuScene")
     end
+end
+
+function GameScene.keypressed(self, key)
 end
 
 return GameScene

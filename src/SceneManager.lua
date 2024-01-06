@@ -23,6 +23,10 @@ function SceneManager.update(self, dt)
     self.currentScene.scene:update(dt)
 end
 
+function SceneManager.keypressed(self, key)
+    self.currentScene.scene:keypressed(key)
+end
+
 -- used on startup only to load first scene
 function SceneManager.load(self, path)
     print("> Loading scene by path: " .. tostring(path))

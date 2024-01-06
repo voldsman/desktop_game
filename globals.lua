@@ -11,3 +11,11 @@ _LS = love.system
 
 OS_TYPE = _LS.getOS()
 IS_WEB = OS_TYPE == "Web"
+
+DEFAULT_COLOR = {1, 1, 1, 1}
+
+-- tml placing it here
+BG_IMAGE = _LG.newImage("src/assets/images/background.jpg")
+FONT_NAME = "src/assets/fonts/VCR_OSD_MONO_1.001.ttf"
+FONT22 = _LG.newFont(FONT_NAME, 22)
+FONT18 = _LG.newFont(FONT_NAME, 18)
