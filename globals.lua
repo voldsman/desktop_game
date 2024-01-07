@@ -14,8 +14,14 @@ IS_WEB = OS_TYPE == "Web"
 
 RESET_COLOR = {1, 1, 1, 1}
 
+GAME_WIDTH = _LG.getWidth()
+GAME_HEIGHT = _LG.getHeight()
+
 -- tml placing it here
 BG_IMAGE = _LG.newImage("src/assets/images/background.jpg")
 FONT_NAME = "src/assets/fonts/VCR_OSD_MONO_1.001.ttf"
 FONT22 = _LG.newFont(FONT_NAME, 22)
 FONT18 = _LG.newFont(FONT_NAME, 18)
+
+PLAYER_LEFT_IMAGE = _LG.newImage("src/assets/images/player.png")
+TILE1_IMAGE = _LG.newImage("src/assets/images/tiles/grass1.png")

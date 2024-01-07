@@ -19,7 +19,7 @@ function MainMenuScreen.new(self, sceneManager)
 end
 
 function MainMenuScreen.draw(self)
-    _LG.draw(BG_IMAGE)
+    _LG.draw(_LG.newImage("src/assets/images/background.jpg"))
     --_LG.setBackgroundColor(.12, .09, .34)
 
     local menuWidth = 200
@@ -28,7 +28,8 @@ function MainMenuScreen.draw(self)
     _LG.rectangle("fill", 0, 0, menuWidth, _LG.getHeight())
     _LG.setColor(RESET_COLOR)
 
-    _LG.setFont(FONT22)
+    _LG.setFont(FONT22)--_LG.newFont(FONT_NAME, 22)
+    --_LG.setFont(_LG.newFont(FONT_NAME, 22))
     local gameNameText = "Desktop Game"
     local font22 = _LG.getFont()
     local textWidth = font22:getWidth(gameNameText)

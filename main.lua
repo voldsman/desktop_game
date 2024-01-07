@@ -1,20 +1,8 @@
 local love = require("love")
 require("globals")
 
-local SceneManager = require("src/SceneManager")
+local SceneManager = require("src/managers/SceneManager")
 local sceneManager = {}
-
-local virtualWidth = 800
-local virtualHeight = 600
-local scale = 1
-local offsetX, offsetY = 0, 0
-
-local function updateScaleAndOffset()
-    local windowWidth, windowHeight = _LG.getDimensions()
-    scale = math.min(windowWidth / virtualWidth, windowHeight / virtualHeight)
-    offsetX = (windowWidth - (virtualWidth * scale)) / 2
-    offsetY = (windowHeight - (virtualHeight * scale)) / 2
-end
 
 function love.load()
     math.randomseed(os.time())
@@ -22,8 +10,6 @@ function love.load()
     _LM.setVisible(false)
     _LG.setDefaultFilter("nearest", "nearest")
     _LG.setBackgroundColor(.25, .3, .23)
-
-    updateScaleAndOffset()
 
     sceneManager = SceneManager.new()
     sceneManager:load("src/scenes/MainMenuScene")
@@ -34,16 +20,10 @@ function love.update(dt)
 end
 
 function love.draw()
-    _LG.push()
-    _LG.translate(offsetX, offsetY)
-    _LG.scale(scale, scale)
-
     sceneManager:draw()
 
-    -- 
+    -- tmp
     love.graphics.print('FPS: ' .. love.timer.getFPS(), 700, 10)
-
-    _LG.pop()
 end
 
 function love.keypressed(key)
@@ -57,5 +37,4 @@ end
 
 function love.resize(w, h)
     print("window resized: " .. w .. "x" .. h)
-    updateScaleAndOffset()
 end
